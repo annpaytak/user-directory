@@ -1,0 +1,13 @@
+.pageContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2;
+}
+
+.loadingBlock {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

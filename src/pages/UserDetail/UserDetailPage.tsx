@@ -1,15 +1,11 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
 import { Alert, Button, CircularProgress, Container, Typography } from '@mui/material';
-import { fetchUserById } from '../../api/users';
+import classes from "./UserDetailPage.module.scss";
+import { useUserDetail } from '@/hooks/useUserDetail';
 
 const UserDetailPage = () => {
   const { id } = useParams<{ id: string }>();
-
-  const { data: user, isLoading, error } = useQuery({
-    queryKey: ['user', id],
-    queryFn: () => fetchUserById(id!),
-  });
+  const { user, isLoading, error } = useUserDetail(id)
 
   const navigate = useNavigate();
 
@@ -17,8 +13,8 @@ const UserDetailPage = () => {
     navigate(-1);
   };
 
-  if (isLoading) return <CircularProgress size={24} />;
-  if (error || !user) return <Alert>Помилка завантаження користувача.</Alert>;
+  if (error || (!user && !isLoading)) return <Alert severity="error">Помилка завантаження користувача.</Alert>;
+  if (isLoading) return <CircularProgress className={classes.loading} size={24} />;
 
   return (
     <Container>

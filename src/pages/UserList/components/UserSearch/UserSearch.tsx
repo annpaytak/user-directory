@@ -17,7 +17,6 @@ const UserSearch = (props: UserSearchProps) => {
       fullWidth
       value={searchQuery}
       onChange={handleSearchChange}
-      style={{ marginBottom: '20px' }}
     />
   );
 };
