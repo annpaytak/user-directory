@@ -51,6 +51,7 @@ npm run test
 
 ### 📁 Project Structure
 
+```sh
 src
 ├── api                 // API interaction logic
 ├── app                 // App initialization (e.g., query client, theme, routing setup)
@@ -60,5 +61,5 @@ src
 │   └── UserDetail/     // Renders at "/user/:id"
 ├── types               // Shared types used across the application
 └── App.tsx             // Routing setup
-
+```
 
