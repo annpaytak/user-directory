@@ -51,15 +51,14 @@ npm run test
 
 ### 📁 Project Structure
 
-src/
-├── api/                // API interaction logic
-├── app/                // App initialization (e.g., query client, theme, routing setup)
-├── components/         // (To be added) Shared UI components will be added as the app grows
-├── hooks/              // Custom hooks (e.g., data fetching)
+src
+├── api                 // API interaction logic
+├── app                 // App initialization (e.g., query client, theme, routing setup)
+├── hooks               // Custom hooks used across the application (e.g., data fetching)
 ├── pages/              // Each folder here represents a route (defined in App.tsx)
 │   ├── UserList/       // Renders at "/"
 │   └── UserDetail/     // Renders at "/user/:id"
-├── types/              // Global TypeScript types
+├── types               // Shared types used across the application
 └── App.tsx             // Routing setup
 
 
