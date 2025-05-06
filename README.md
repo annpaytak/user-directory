@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# 🧑‍💼 User Directory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple user directory app built with **React**, **TypeScript**, **Vite**, and **MUI**. It fetches and displays users from a public API (`jsonplaceholder.typicode.com`) and supports navigation to user detail pages. Includes testing setup with **Vitest** and **React Testing Library**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🔍 List of users with basic info
+- 📄 User detail page with extended info
+- ⚡ Fast and optimized with Vite
+- 🧪 Unit tests for components and pages
+- 🔁 Error handling and retry logic
+- 🔃 Debounced search input
+- 🚀 Lazy loading of route-based pages
+- 🧹 Clean architecture (separation of logic, styling, and components)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Stack
+
+- **React** + **TypeScript**
+- **Vite** for build/dev
+- **MUI** for UI components
+- **Axios** for API requests
+- **React Router** for routing
+- **React Query** for data fetching
+- **Vitest** + **React Testing Library** for testing
+
+---
+
+## 📦 Getting Started
+
+### 1. Install dependenciesRun the app
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Run the app
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+### 3. Run tests
+
+```bash
+npm run test
+```
+
+### 📁 Project Structure
+
+src/
+├── api/                // API interaction logic
+├── app/                // App initialization (e.g., query client, theme, routing setup)
+├── components/         // (To be added) Shared UI components will be added as the app grows
+├── hooks/              // Custom hooks (e.g., data fetching)
+├── pages/              // Each folder here represents a route (defined in App.tsx)
+│   ├── UserList/       // Renders at "/"
+│   └── UserDetail/     // Renders at "/user/:id"
+├── types/              // Global TypeScript types
+└── App.tsx             // Routing setup
+
+
