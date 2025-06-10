@@ -6,6 +6,7 @@ const queryClient = new QueryClient();
 
 const UserListPage = lazy(() => import('./pages/UserList/UserListPage'));
 const UserDetailPage = lazy(() => import('./pages/UserDetail/UserDetailPage'));
+const FileSystemPage = lazy(() => import('./pages/FileSystem/FileSystemPage'));
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<UserListPage />} />
           <Route path="/user/:id" element={<UserDetailPage />} />
+          <Route path="/files" element={<FileSystemPage />} />
         </Routes>
       </Router>
     </QueryClientProvider>

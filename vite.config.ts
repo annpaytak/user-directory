@@ -10,4 +10,8 @@ export default defineConfig({
       "@": resolve(__dirname, "src"),
     },
   },
+  json: {
+    namedExports: true,
+    stringify: false,
+  },
 })

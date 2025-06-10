@@ -1,0 +1,91 @@
+[
+  {
+    "id": "1",
+    "name": "Desktop",
+    "type": "folder",
+    "isFavourite": false,
+    "children": [
+      {
+        "id": "4",
+        "name": "Work",
+        "type": "folder",
+        "isFavourite": true,
+        "children": [
+          {
+            "id": "6",
+            "name": "Report.docx",
+            "type": "file",
+            "isFavourite": false,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Downloads",
+    "type": "folder",
+    "isFavourite": false,
+    "children": [
+      {
+        "id": "5",
+        "name": "codewars",
+        "type": "folder",
+        "isFavourite": true,
+        "children": [
+          {
+            "id": "7",
+            "name": "groupByPolyfill.js",
+            "type": "file",
+            "isFavourite": false,
+            "children": []
+          },
+          {
+            "id": "8",
+            "name": "supermarketQueue.js",
+            "type": "file",
+            "isFavourite": false,
+            "children": []
+          },
+          {
+            "id": "9",
+            "name": "findPeak.js",
+            "type": "file",
+            "isFavourite": false,
+            "children": []
+          },
+          {
+            "id": "10",
+            "name": "findRoutes.js",
+            "type": "file",
+            "isFavourite": false,
+            "children": []
+          },
+          {
+            "id": "11",
+            "name": "arrayPolyfills",
+            "type": "folder",
+            "isFavourite": false,
+            "children": [
+              {
+                "id": "12",
+                "name": "mapPolyfill.js",
+                "type": "file",
+                "isFavourite": false,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Documents",
+    "type": "folder",
+    "isFavourite": false,
+    "children": []
+  }
+]
