@@ -13,7 +13,7 @@ export const useUsers = (searchQuery: string) => {
   } = useInfiniteQuery(
     {
       queryKey: ['users', debouncedSearchQuery],
-      queryFn: ({ pageParam = 1 }) => fetchUsers({ pageParam, searchQuery: debouncedSearchQuery }),
+      queryFn: ({ pageParam = 1, signal }) => fetchUsers({ pageParam, searchQuery: debouncedSearchQuery, signal }),
       initialPageParam: 0,
       getNextPageParam: (lastPage, pages) => {
         if (lastPage.length === 5) {
