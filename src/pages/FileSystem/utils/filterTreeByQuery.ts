@@ -15,5 +15,5 @@ export const filterTreeByQuery = (nodes: FileNode[], query: string): FileNode[] 
 
       return null;
     })
-    .filter(Boolean);
+    .filter(Boolean) as FileNode[];
 };
