@@ -16,19 +16,21 @@ const UserDetailPage = () => {
   if (error || (!user && !isLoading)) return <Alert severity="error">Помилка завантаження користувача.</Alert>;
   if (isLoading) return <CircularProgress className={classes.loading} size={24} />;
 
-  return (
-    <Container>
-      <Button variant="outlined" onClick={handleGoBack} sx={{ marginBottom: 2 }}>
-        Назад
-      </Button>
-      <Typography variant="h1" gutterBottom>{user.name}</Typography>
-      <Typography variant="body1"><strong>Email:</strong> {user.email}</Typography>
-      <Typography variant="body1"><strong>Номер телефону:</strong> {user.phone}</Typography>
-      <Typography variant="body1">
-        <strong>Адреса:</strong> {user.address.street}, {user.address.suite}, {user.address.city}
-      </Typography>
-    </Container>
-  );
+  if (user)
+    return (
+      <Container>
+        <Button variant="outlined" onClick={handleGoBack} sx={{ marginBottom: 2 }}>
+          Назад
+        </Button>
+        <Typography variant="h1" gutterBottom>{user.name}</Typography>
+        <Typography variant="body1"><strong>Email:</strong> {user.email}</Typography>
+        <Typography variant="body1"><strong>Номер телефону:</strong> {user.phone}</Typography>
+        <Typography variant="body1">
+          <strong>Адреса:</strong> {user.address.street}, {user.address.suite}, {user.address.city}
+        </Typography>
+      </Container>
+    );
+  return <></>
 };
 
 export default UserDetailPage

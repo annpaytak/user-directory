@@ -7,7 +7,7 @@ import { renderTree } from './utils/renderHelpers';
 
 const FileSystemPage = () => {
   const [query, setQuery] = useState('');
-  const [data] = useState<FileNode[]>(mockData);
+  const [data] = useState<FileNode[]>(mockData as Array<FileNode>);
 
   const filtered = query ? filterTreeByQuery(data, query) : data;
 

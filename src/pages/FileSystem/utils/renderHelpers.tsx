@@ -1,7 +1,7 @@
 import { FileNode } from "@/types/file";
 import { JSX } from "react";
 
-const renderName = (name: string, query) => {
+const renderName = (name: string, query: string) => {
   if (!query) return name;
 
   const i = name.toLowerCase().indexOf(query.toLowerCase());
@@ -20,7 +20,7 @@ const renderName = (name: string, query) => {
   );
 };
 
-export const renderTree = (nodes: FileNode[], depth = 0, query): JSX.Element[] =>
+export const renderTree = (nodes: FileNode[], depth = 0, query: string): JSX.Element[] =>
   nodes.map((node) => (
     <div key={node.id} style={{ paddingLeft: depth * 20 }}>
       {node.isFavourite ? '⭐' : ''}
